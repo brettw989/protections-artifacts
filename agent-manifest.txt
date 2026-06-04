@@ -34,6 +34,7 @@
 ./behavior/rules/cross-platform/privilege_escalation_suspicious_privileged_docker_execution.toml
 ./behavior/rules/linux/collection_multi_value_secret_searching_via_grep.toml
 ./behavior/rules/linux/command_and_control_dns_request_by_recently_created_executable.toml
+./behavior/rules/linux/command_and_control_dns_request_by_suspicious_process_executable.toml
 ./behavior/rules/linux/command_and_control_dns_request_to_crypto_miner_service.toml
 ./behavior/rules/linux/command_and_control_dns_request_to_dynamic_dns_via_suspicious_executable.toml
 ./behavior/rules/linux/command_and_control_dns_request_to_suspicious_file_upload_download_service.toml
@@ -73,16 +74,16 @@
 ./behavior/rules/linux/defense_evasion_defense_evasion_via_hidepid_mount.toml
 ./behavior/rules/linux/defense_evasion_deletion_of_shell_history_file.toml
 ./behavior/rules/linux/defense_evasion_egress_network_connection_from_deleted_executable_by_root.toml
-./behavior/rules/linux/defense_evasion_execution_of_in_memory_file_via_interactive_session.toml
+./behavior/rules/linux/defense_evasion_execution_of_memory_file_descriptor_via_interactive_session.toml
 ./behavior/rules/linux/defense_evasion_hexadecimal_ip_command_line_argument.toml
-./behavior/rules/linux/defense_evasion_in_memory_child_process_execution.toml
-./behavior/rules/linux/defense_evasion_in_memory_process_execution.toml
 ./behavior/rules/linux/defense_evasion_linux_compilation_in_suspicious_directory.toml
 ./behavior/rules/linux/defense_evasion_linux_hidden_file_mounted.toml
 ./behavior/rules/linux/defense_evasion_linux_payload_decoded_and_decrypted_via_built_in_utility.toml
 ./behavior/rules/linux/defense_evasion_linux_shared_object_load_via_ssh_keygen.toml
+./behavior/rules/linux/defense_evasion_memory_file_descriptor_child_process_execution.toml
+./behavior/rules/linux/defense_evasion_memory_file_descriptor_process_execution.toml
 ./behavior/rules/linux/defense_evasion_multiple_system_log_files_deletion.toml
-./behavior/rules/linux/defense_evasion_network_activity_from_in_memory_file.toml
+./behavior/rules/linux/defense_evasion_network_activity_from_memory_file_descriptor.toml
 ./behavior/rules/linux/defense_evasion_potential_disabling_of_apparmor.toml
 ./behavior/rules/linux/defense_evasion_potential_masquerading_via__proc_self_exe.toml
 ./behavior/rules/linux/defense_evasion_potential_nologin_ssh_backdoor.toml
@@ -216,6 +217,7 @@
 ./behavior/rules/linux/privilege_escalation_potential_cgroup_privilege_escalation_container_escape_via_mount.toml
 ./behavior/rules/linux/privilege_escalation_potential_cve_2025_32463_nsswitch_file_creation.toml
 ./behavior/rules/linux/privilege_escalation_potential_cve_2025_32463_sudo_chroot_execution_attempt.toml
+./behavior/rules/linux/privilege_escalation_potential_local_privilege_escalation_via_unshare.toml
 ./behavior/rules/linux/privilege_escalation_potential_packagekit_toctou_privilege_escalation_via_cve_2026_41651.toml
 ./behavior/rules/linux/privilege_escalation_potential_privilege_escalation_via_fuse_binary.toml
 ./behavior/rules/linux/privilege_escalation_potential_privilege_escalation_via_overlayfs.toml
@@ -394,7 +396,6 @@
 ./behavior/rules/macos/execution_file_cloned_by_unsigned_or_untrusted_process.toml
 ./behavior/rules/macos/execution_file_download_piped_to_script_interpreter.toml
 ./behavior/rules/macos/execution_hidden_folder_or_file_access_in_tmp_via_python.toml
-./behavior/rules/macos/execution_hidden_python_script_execution_via_nodejs.toml
 ./behavior/rules/macos/execution_initial_access_discovery_via_applet_executable.toml
 ./behavior/rules/macos/execution_initial_access_via_audio_unit_plug_in.toml
 ./behavior/rules/macos/execution_initial_access_via_macos_installer_package.toml
@@ -715,6 +716,7 @@
 ./behavior/rules/windows/defense_evasion_potential_dll_sideload_via_a_renamed_signed_binary.toml
 ./behavior/rules/windows/defense_evasion_potential_elastic_tampering_via_pendingfilerename.toml
 ./behavior/rules/windows/defense_evasion_potential_endpoint_security_evasion_via_firewallrules.toml
+./behavior/rules/windows/defense_evasion_potential_etw_bypass_via_virtualprotect.toml
 ./behavior/rules/windows/defense_evasion_potential_evasion_via_asp.net_compiler.toml
 ./behavior/rules/windows/defense_evasion_potential_evasion_via_clipup_execution.toml
 ./behavior/rules/windows/defense_evasion_potential_evasion_via_dotnet_framework_installation_utility.toml
